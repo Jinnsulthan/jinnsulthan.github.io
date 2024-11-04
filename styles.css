@@ -1,59 +1,108 @@
+*styles.css*
+```
+/* Global Styles */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #53AB92, #4888B6);
-    font-family: 'Helvetica', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
 }
 
-.container {
-    text-align: center;
-    position: relative;
+
+/* Navbar Styles */
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.man img {
-    width: 150px;
-    animation: bounce 2s infinite;
+.navbar-brand {
+  font-weight: 600;
+  color: #00698f;
 }
 
-.speech-bubble {
-    background: #fff;
-    border-radius: 10px;
-    border: 2px solid #53AB92;
-    padding: 10px;
-    position: absolute;
-    top: -50px;
-    left: 160px;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-link {
+  color: #333;
+  transition: color 0.2s ease;
 }
 
-.speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 20px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: white;
+.nav-link:hover {
+  color: #00698f;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+/* Portfolio Section Styles */
+
+#portfolio {
+  background-color: #fff;
+  padding: 50px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.display-4 {
+  font-weight: 600;
+  color: #00698f;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #00698f;
+}
+
+/* Footer Styles */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #00698f;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+```
